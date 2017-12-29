@@ -5,6 +5,5 @@
         string Name();
         int Health();
         void Eat();
-        void Attack();
     }
 }
