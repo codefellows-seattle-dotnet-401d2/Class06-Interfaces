@@ -12,7 +12,7 @@ namespace TheFingerGame.Classes
         public void MoveFast()
         {
             Random rand = new Random();
-            int speed = rand.Next(2, 5);
+            int speed = rand.Next(2, 6);
             Distance = Distance - speed;
             Console.Write("The Hare flailed wildly.");
             Console.WriteLine(" Hare is " + Distance + " meters from the finish line.");

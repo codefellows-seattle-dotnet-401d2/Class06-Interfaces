@@ -13,7 +13,7 @@ namespace TheFingerGame.Classes
         public void DecideSpeed()
         {
             Random rand = new Random();
-            int laziness = rand.Next(0, 2);
+            int laziness = rand.Next(0, 3);
             switch (laziness)
             {
                 case 0:
@@ -32,7 +32,7 @@ namespace TheFingerGame.Classes
         public void MoveFast()
         {
             Random rand = new Random();
-            int speed = rand.Next(3, 5);
+            int speed = rand.Next(3, 6);
             Distance = Distance - speed;
             Console.WriteLine("The Cat chased a bug for a bit.");
         }
@@ -40,7 +40,7 @@ namespace TheFingerGame.Classes
         public void MoveSlow()
         {
             Random rand = new Random();
-            int speed = rand.Next(1, 3);
+            int speed = rand.Next(1, 4);
             Distance = Distance - speed;
             Console.WriteLine("The Cat wandered towards the finishline.");
         }
