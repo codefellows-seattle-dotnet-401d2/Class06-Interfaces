@@ -7,11 +7,11 @@ namespace MortalKombatConsoleGame.Classes
 {
     class PlayerOne : Player, IAttacker, IBadge
     {
-        public PlayerOne(int characterNumber, int damagePerAttack)
+        public PlayerOne(string characterName, int damagePerAttack)
         {
             Health = 50;
             Rank = 0;
-            CharacterNumber = characterNumber;
+            CharacterName = characterName;
             DamagePerAttack = damagePerAttack;
         }
 

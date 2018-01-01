@@ -7,7 +7,7 @@ namespace MortalKombatConsoleGame.Classes
 {
     public abstract class Player : IPlayer
     {
-        public int CharacterNumber { get; set; }
+        public string CharacterName { get; set; }
         public int Health { get; set; }
         public int Rank { get; set; }
         public int DamagePerAttack { get; set; }

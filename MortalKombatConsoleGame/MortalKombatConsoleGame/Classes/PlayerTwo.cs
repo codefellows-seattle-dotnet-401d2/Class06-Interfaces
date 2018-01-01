@@ -10,11 +10,11 @@ namespace MortalKombatConsoleGame.Classes
         public int DamageWhenCover = 1;
         public bool CoverOn;
 
-        public PlayerTwo(int characterNumber)
+        public PlayerTwo(string characterName)
         {
             Health = 50;
             CoverOn = false;
-            CharacterNumber = characterNumber;
+            CharacterName = characterName;
         }
 
         public void TakeCover()
