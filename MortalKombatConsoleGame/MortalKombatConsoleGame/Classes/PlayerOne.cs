@@ -5,7 +5,7 @@ using MortalKombatConsoleGame.Interfaces;
 
 namespace MortalKombatConsoleGame.Classes
 {
-    class PlayerOne : Player, IAttacker
+    class PlayerOne : Player, IAttacker, IBadge
     {
         public int Punch()
         {
@@ -13,6 +13,11 @@ namespace MortalKombatConsoleGame.Classes
         }
 
         public int Kick()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RankUp(int currentLevel)
         {
             throw new NotImplementedException();
         }
