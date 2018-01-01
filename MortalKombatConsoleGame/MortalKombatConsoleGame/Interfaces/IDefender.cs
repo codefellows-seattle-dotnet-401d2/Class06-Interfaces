@@ -2,7 +2,7 @@
 {
     public interface IDefender
     {
-        bool TakeCover();
+        void TakeCover();
         void Hurt(int attackType);
     }
 }

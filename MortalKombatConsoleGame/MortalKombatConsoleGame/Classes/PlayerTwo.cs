@@ -7,17 +7,25 @@ namespace MortalKombatConsoleGame.Classes
 {
     public class PlayerTwo : Player, IDefender
     {
-        private int DamageWhenCover = 2;
-        private int DamageWhenHurt = 10;
+        public int DamageWhenCover = 1;
+        public bool CoverOn;
 
-        public bool TakeCover()
+        public void TakeCover()
         {
-            throw new NotImplementedException();
+            DamagePerAttack = DamageWhenCover;
+            CoverOn = !CoverOn;
         }
 
         public void Hurt(int attackType)
         {
-            throw new NotImplementedException();
+            if (attackType == 1)
+            {
+                Health -= DamagePerAttack;
+            }
+            else
+            {
+                Health -= DamagePerAttack * 2;
+            }
         }
     }
 }

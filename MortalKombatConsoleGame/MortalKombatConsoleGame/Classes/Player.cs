@@ -10,24 +10,22 @@ namespace MortalKombatConsoleGame.Classes
         public int CharacterNumber { get; set; }
         public int Health { get; set; }
         public int Rank { get; set; }
+        public int DamagePerAttack { get; set; }
+        public int Position { get; set; }
+
         public void Walk()
         {
-            throw new NotImplementedException();
+            Position++;
         }
 
         public void Run()
         {
-            throw new NotImplementedException();
+            Position += 2;
         }
 
-        public void Jump()
+        public void Eat(int food)
         {
-            throw new NotImplementedException();
-        }
-
-        public int Eat(int food)
-        {
-            throw new NotImplementedException();
+            Health += food;
         }
     }
 }
