@@ -2,8 +2,9 @@
 {
     public interface IPlayer
     {
-        string Name();
-        int Health();
-        void Eat();
+        void Walk();
+        void Run();
+        void Jump();
+        int Eat(int food);
     }
 }
