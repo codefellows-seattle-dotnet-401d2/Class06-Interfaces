@@ -5,8 +5,11 @@ using MortalKombatConsoleGame.Interfaces;
 
 namespace MortalKombatConsoleGame.Classes
 {
-    class PlayerTwo : Player, IDefender
+    public class PlayerTwo : Player, IDefender
     {
+        private int DamageWhenCover = 2;
+        private int DamageWhenHurt = 10;
+
         public bool TakeCover()
         {
             throw new NotImplementedException();
