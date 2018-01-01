@@ -4,6 +4,6 @@
     {
         void Walk();
         void Run();
-        void Eat(int food);
+        void Eat();
     }
 }

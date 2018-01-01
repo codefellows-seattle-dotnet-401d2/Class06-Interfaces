@@ -22,10 +22,5 @@ namespace MortalKombatConsoleGame.Classes
             DamagePerAttack = DamageWhenCover;
             CoverOn = !CoverOn;
         }
-
-        public void Hurt(int attackType)
-        {
-            Health -= attackType == 1 ? DamagePerAttack : DamagePerAttack * 2;
-        }
     }
 }

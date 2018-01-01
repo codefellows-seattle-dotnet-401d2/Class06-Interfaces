@@ -3,6 +3,5 @@
     public interface IDefender
     {
         void TakeCover();
-        void Hurt(int attackType);
     }
 }

@@ -23,9 +23,10 @@ namespace MortalKombatConsoleGame.Classes
             Position += 2;
         }
 
-        public void Eat(int food)
+        public void Eat()
         {
-            Health += food;
+            Random random = new Random();
+            Health += random.Next(0, 3);
         }
     }
 }
