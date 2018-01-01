@@ -1,8 +1,10 @@
-﻿namespace MortalKombatConsoleGame.Interfaces
+﻿using MortalKombatConsoleGame.Classes;
+
+namespace MortalKombatConsoleGame.Interfaces
 {
     public interface IAttacker
     {
-        int Punch();
-        int Kick();
+        void Punch(Player player);
+        void Kick(Player player);
     }
 }

@@ -15,19 +15,19 @@ namespace MortalKombatConsoleGame.Classes
             DamagePerAttack = damagePerAttack;
         }
 
-        public int Punch()
+        public void Punch(Player player)
         {
-            throw new NotImplementedException();
+            player.Health -= DamagePerAttack / 2;
         }
 
-        public int Kick()
+        public void Kick(Player player)
         {
-            throw new NotImplementedException();
+            player.Health -= DamagePerAttack;
         }
 
-        public void RankUp(int currentLevel)
+        public void RankUp(int numberOfWins)
         {
-            throw new NotImplementedException();
+            Rank = numberOfWins;
         }
     }
 }

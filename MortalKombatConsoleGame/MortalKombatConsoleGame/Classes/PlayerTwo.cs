@@ -25,14 +25,7 @@ namespace MortalKombatConsoleGame.Classes
 
         public void Hurt(int attackType)
         {
-            if (attackType == 1)
-            {
-                Health -= DamagePerAttack;
-            }
-            else
-            {
-                Health -= DamagePerAttack * 2;
-            }
+            Health -= attackType == 1 ? DamagePerAttack : DamagePerAttack * 2;
         }
     }
 }
