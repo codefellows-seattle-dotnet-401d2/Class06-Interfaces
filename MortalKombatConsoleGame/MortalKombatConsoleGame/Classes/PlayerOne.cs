@@ -9,7 +9,7 @@ namespace MortalKombatConsoleGame.Classes
     {
         public PlayerOne(int characterNumber, int damagePerAttack)
         {
-            Health = 100;
+            Health = 50;
             Rank = 0;
             CharacterNumber = characterNumber;
             DamagePerAttack = damagePerAttack;
