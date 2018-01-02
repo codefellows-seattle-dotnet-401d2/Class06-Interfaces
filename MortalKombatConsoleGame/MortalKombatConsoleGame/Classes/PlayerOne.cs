@@ -10,7 +10,8 @@ namespace MortalKombatConsoleGame.Classes
         public PlayerOne(string characterName, int damagePerAttack)
         {
             Health = 50;
-            Rank = 0;
+            Rank = 1;
+            Position = 0;
             CharacterName = characterName;
             DamagePerAttack = damagePerAttack;
         }
@@ -25,9 +26,10 @@ namespace MortalKombatConsoleGame.Classes
             player.Health -= DamagePerAttack;
         }
 
-        public void RankUp(int numberOfWins)
+        public int RankUp(int numberOfWins)
         {
             Rank = numberOfWins;
+            return Rank;
         }
     }
 }

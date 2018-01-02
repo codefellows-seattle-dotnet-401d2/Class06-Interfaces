@@ -13,20 +13,20 @@ namespace MortalKombatConsoleGame.Classes
         public int DamagePerAttack { get; set; }
         public int Position { get; set; }
 
-        public void Walk()
+        public int Walk()
         {
-            Position++;
+            return Position++;
         }
 
-        public void Run()
+        public int Run()
         {
-            Position += 2;
+            return Position += 2;
         }
 
         public void Eat()
         {
             Random random = new Random();
-            Health += random.Next(0, 3);
+            Health += random.Next(1, 3);
         }
     }
 }
