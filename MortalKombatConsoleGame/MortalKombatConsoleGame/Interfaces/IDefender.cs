@@ -1,7 +1,9 @@
-﻿namespace MortalKombatConsoleGame.Interfaces
+﻿using MortalKombatConsoleGame.Classes;
+
+namespace MortalKombatConsoleGame.Interfaces
 {
     public interface IDefender
     {
-        void TakeCover();
+        void TakeCoverFrom(Player playerOne);
     }
 }

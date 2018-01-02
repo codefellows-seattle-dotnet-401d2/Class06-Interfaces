@@ -2,6 +2,6 @@
 {
     public interface IBadge
     {
-        void RankUp(int currentLevel);
+        int RankUp(int currentLevel);
     }
 }

@@ -2,8 +2,8 @@
 {
     public interface IPlayer
     {
-        void Walk();
-        void Run();
+        int Walk();
+        int Run();
         void Eat();
     }
 }
