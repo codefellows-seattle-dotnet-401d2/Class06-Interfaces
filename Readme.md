@@ -1,46 +1,36 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Lab 6 : Interfaces
-=====================================
+# Mortal Kombat
 
-## To Submit this Assignment
-- fork this repository
-- create a new branch named `lab01-`; + `<your name>` **e.g.** `lab06-amanda`
-- write your code
-- push to your repository
-- submit a pull request to this repository
-- submit a link to your PR in canvas
-- Include a Readme.md (contents described below)
+**Author**: Luay Younus
+**Version**: 1.0
 
-## Directions
-- Build a game (Think of something along the lines of Attackers vs Defenders. Get creative)
-- Create it with a minimum of 2 interfaces.
-	- One class should implement one interface
-	- Another class to implement the other interface
-	- Third class to implement both interfaces.
-- Make use of each class that implements the interface. Show the classes "powers" and "restrictions"
-- Test your code with Unit testing
-- Use all 4 OOP principles.
-- Draw a diagram out that maps out the relationships between classes.
-- Label interfaces as `<interface>`
-- Include the directions of the game in your readme. 
+## Overview
+This is a mini game from the famous Mortal Kombat to practice C# interfaces. The game demonstrates Players classes implementing interfaces and an abstract class being derived.
 
-## ReadMe
-A README is a module consumer's first -- and maybe only -- look into your creation. The consumer wants a module to fulfill their need, so you must explain exactly what need your module fills, and how effectively it does so.
-<br />
-Your job is to
+## Requirements to run the Application
+- [Visual Studio 2017 Community with .NET Core 2.0 SDK](https://www.microsoft.com/net/core#windowscmd)
+- [GitBash / Terminal](https://git-scm.com/downloads) or [GitHub Extension for Visual Studio](https://visualstudio.github.com)
 
-1. tell them what it is (with context)
-2. show them what it looks like in action
-3. show them how they use it
-4. tell them any other relevant details
+## Diagram
+![InterfacesDiagram](InterfacesMortalKombat.png?raw=true "Inheritance")
 
-<br />
+## Getting Started
+1. Clone the repository to your local machine.
+2. Cd into the application directory where the `AppName.sln` exist.
+3. Open the application using `Open/Start AppName.sln`.
+4. Once Visual Studio is opened, you can Run the application by clicking on the Play button <img src="https://github.com/luayyounus/Lab02-Unit-Testing/blob/Lab02-Luay/WarCardGame/play-button.jpg" width="16"> and the console game will run.
+5. A welcome message with instructions will be displayed to teach you how to play the console game.
+**Note**: Press the `Enter` key whenever you are stuck.
 
-This is ***your*** job. It's up to the module creator to prove that their work is a shining gem in the sea of slipshod modules. Since so many developers' eyes will find their way to your README before anything else, quality here is your public-facing measure of your work.
+## Game Experience
+ The game allows the user to assign new characters and fight with a Kick or Punch movements. The progress of the game shows the Initials of every player and defender's names. The following are the rules applied:
+ - Player One always wins, no matter what.
+ - Player One has the right to either Kick or Punch once at a time with a certain damage caused to Player two.
+ - Player One is allowed to Walk or Run which leads both players to move forward in the battle field.
+ - Player Two has the right to Cover up to reduce health damage.
+ - Player Two loses whenever their health is below 1, Or when the edge of the battle ground is reached.
 
-<br /> <br /> Refer to the sample-README in the class repo for an example. 
-- [Reference](https://github.com/noffle/art-of-readme)
-
-## Rubric
-- 7pts: Program meets all requirements described in Lab directions
-- 3pts: Code meets industry standards
-- **Readme.md required for submission. Missing readme document will result in a best score of 2/10**
+## Architecture
+ - C# Console Core application.
+ - Interfaces are being implemented by each player to execute an action during the game.
+ - Player class is a base abstract class that holds the properties and actions both needed by PlayerOne and PlayerTwo.
+ - Derived classes use Constructors with customed values to speed up the fight starting stage.
