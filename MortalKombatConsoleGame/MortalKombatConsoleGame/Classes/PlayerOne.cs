@@ -5,7 +5,7 @@ using MortalKombatConsoleGame.Interfaces;
 
 namespace MortalKombatConsoleGame.Classes
 {
-    class PlayerOne : Player, IAttacker, IBadge
+    public class PlayerOne : Player, IAttacker, IBadge
     {
         public PlayerOne(string characterName, int damagePerAttack)
         {
