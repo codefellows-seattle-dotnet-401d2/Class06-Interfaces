@@ -17,7 +17,7 @@ namespace MageFight.Classes
         public bool CastBizzara(Mage enemy)
         {
             enemy.HP -= 20;
-            MP -= 10;
+            MP -= 15;
             Console.WriteLine("Attacked " + enemy.Name + " with blizzara for 20 points of damage! " + enemy.Name + " Health: " + enemy.HP);
             Console.WriteLine(Name + " Health: " + HP + " MP: " + MP);
             if (enemy.HP > 0) return true;

@@ -91,10 +91,10 @@ namespace MageFight
                         continueGame = player.M_Attack(5, enemy);
                         break;
                     case "6":
-                        continueGame = player.M_Attack(5, enemy);
+                        continueGame = player.M_Attack(6, enemy);
                         break;
                     case "7":
-                        continueGame = player.M_Attack(5, enemy);
+                        continueGame = player.M_Attack(7, enemy);
                         break;
                     default:
                         Console.WriteLine("Input not valid! Try again.");

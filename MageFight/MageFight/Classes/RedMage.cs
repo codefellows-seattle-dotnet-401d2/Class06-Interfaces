@@ -17,7 +17,7 @@ namespace MageFight.Classes
         public bool CastBizzara(Mage enemy)
         {
             enemy.HP -= 20;
-            MP -= 12;
+            MP -= 18;
             Console.WriteLine("Attacked " + enemy.Name + " with blizzara for 20 points of damage! " + enemy.Name + " Health: " + enemy.HP);
             Console.WriteLine(Name + " Health: " + HP + " MP: " + MP);
             if (enemy.HP > 0) return true;
@@ -45,9 +45,9 @@ namespace MageFight.Classes
         public bool CastHoly(Mage enemy)
         {
             enemy.HP -= 20;
-            HP += 10;
+            HP += 15;
             MP -= 48;
-            Console.WriteLine("Attacked " + enemy.Name + " with holy for 20 points of damage and " + Name + " restored 10 HP! " + enemy.Name + " Health: " + enemy.HP);
+            Console.WriteLine("Attacked " + enemy.Name + " with holy for 20 points of damage and " + Name + " restored 15 HP! " + enemy.Name + " Health: " + enemy.HP);
             Console.WriteLine(Name + " Health: " + HP + " MP: " + MP);
             if (enemy.HP > 0) return true;
             else return false;
@@ -106,6 +106,7 @@ namespace MageFight.Classes
             MP += 10;
             Console.WriteLine("Attacked " + enemy.Name + " with a long sword for 8 points of damage! " + Name + " restored 10 MP.");
             Console.WriteLine("Enemy " + enemy.Name + " health: " + enemy.HP);
+            Console.WriteLine(Name + " Health: " + HP + " MP: " + MP);
             if (enemy.HP > 0) return true;
             else return false;
         }

@@ -25,9 +25,9 @@ namespace MageFight.Classes
         public bool CastHoly(Mage enemy)
         {
             enemy.HP -= 20;
-            HP += 10;
+            HP += 15;
             MP -= 40;
-            Console.WriteLine("Attacked " + enemy.Name + " with holy for 20 points of damage and " + Name + " restored 10 HP! " + enemy.Name + " Health: " + enemy.HP);
+            Console.WriteLine("Attacked " + enemy.Name + " with holy for 20 points of damage and " + Name + " restored 15 HP! " + enemy.Name + " Health: " + enemy.HP);
             Console.WriteLine(Name + " Health: " + HP + " MP: " + MP);
             if (enemy.HP > 0) return true;
             else return false;
