@@ -44,6 +44,12 @@ namespace MageFight.Classes
             else return false;
         }
 
+        /// <summary>
+        /// Used to handle casting specific mage spells since I am not able to call methods from an interface on a generic mage class.
+        /// </summary>
+        /// <param name="choice">Spell method to use</param>
+        /// <param name="enemy">Mage instance to pass into spell method</param>
+        /// <returns>true if enemy HP is still > 0</returns>
         public override bool M_Attack(int choice, Mage enemy)
         {
             bool continueGame = true;

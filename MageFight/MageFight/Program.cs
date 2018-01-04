@@ -24,6 +24,10 @@ namespace MageFight
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// Displays menu options to choose a character. Starts game with chosen character and random enemy character.
+        /// </summary>
+        /// <returns>Will exit method with option chosen. "4" will exit the app.</returns>
         private static string MainMenu()
         {
             Console.Write(
@@ -59,6 +63,11 @@ namespace MageFight
             return (isValidInput) ? userInput : MainMenu();
         }
 
+        /// <summary>
+        /// Main loop of the game. Displays available input options, will call appropriate attack method which returns a bool used to determine if this main loop should continue.
+        /// </summary>
+        /// <param name="player">player executing the move</param>
+        /// <param name="enemy">player being attacked</param>
         private static void PlayGame(Mage player, Mage enemy)
         {
             bool continueGame = true;
@@ -103,6 +112,10 @@ namespace MageFight
             } while (continueGame);
         }
 
+        /// <summary>
+        /// Used to choose an enemy at random.
+        /// </summary>
+        /// <returns>random Mage instance</returns>
         private static Mage GetEnemy()
         {
             Random r = new Random();
