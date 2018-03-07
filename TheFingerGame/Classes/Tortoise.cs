@@ -5,7 +5,7 @@ using TheFingerGame.Classes.Interfaces;
 
 namespace TheFingerGame.Classes
 {
-    class Tortoise : IMoveSlow
+    public class Tortoise : IMoveSlow
     {
         public int Distance { get; set; }
 

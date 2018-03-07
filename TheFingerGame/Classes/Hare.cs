@@ -5,7 +5,7 @@ using TheFingerGame.Classes.Interfaces;
 
 namespace TheFingerGame.Classes
 {
-    class Hare : IMoveFast
+    public class Hare : IMoveFast
     {
         public int Distance { get; set; }
 

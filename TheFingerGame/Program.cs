@@ -15,7 +15,7 @@ namespace TheFingerGame
             
         } //main class
 
-        void runGame()
+        public static void runGame()
         {
             bool gameRunning = true;
 
@@ -23,14 +23,14 @@ namespace TheFingerGame
             {
 
                 //Instantiate contestants
-                Cat Cat = new Cat();
-                Cat.Distance = 25;
+                Cat cat = new Cat();
+                cat.Distance = 25;
 
-                Tortoise Tortoise = new Tortoise();
-                Tortoise.Distance = 25;
+                Tortoise tortoise = new Tortoise();
+                tortoise.Distance = 25;
 
-                Hare Hare = new Hare();
-                Hare.Distance = 25;
+                Hare hare = new Hare();
+                hare.Distance = 25;
 
                 Console.WriteLine("The contestants are ready, press Enter to fire off the starting pistol and start the race!");
                 Console.Read();
@@ -48,7 +48,7 @@ namespace TheFingerGame
                 while (RaceInProgress)
                 {
 
-                    raceSegment();
+                    RaceInProgress = raceSegment(cat, tortoise, hare, RaceInProgress);
 
                 } // end race loop
                 Console.Read();
@@ -61,40 +61,42 @@ namespace TheFingerGame
             } //end game loop
         } //end game method
 
-        void raceSegment()
+        public static bool raceSegment(Cat cat, Tortoise tortoise, Hare hare, bool RaceInProgress)
         {
-            Cat.DecideSpeed();
+            cat.DecideSpeed();
 
             Console.Read();
             Console.Clear();
-            if (Cat.Distance <= 0)
+            if (cat.Distance <= 0)
             {
                 Console.WriteLine("The Cat Wins!");
                 RaceInProgress = false;
-                break;
+                return RaceInProgress;
             }
 
-            Tortoise.MoveSlow();
+            tortoise.MoveSlow();
 
             Console.Read();
             Console.Clear();
-            if (Tortoise.Distance <= 0)
+            if (tortoise.Distance <= 0)
             {
                 Console.WriteLine("The Tortoise Wins!");
                 RaceInProgress = false;
-                break;
+                return RaceInProgress;
             }
 
-            Hare.MoveFast();
+            hare.MoveFast();
 
             Console.Read();
             Console.Clear();
-            if (Hare.Distance <= 0)
+            if (hare.Distance <= 0)
             {
                 Console.WriteLine("The Hare Wins!");
                 RaceInProgress = false;
-                break;
+                return RaceInProgress;
             }
+
+            return RaceInProgress;
         } //End of game turn method
     }
 }
